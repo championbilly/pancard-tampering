@@ -17,7 +17,8 @@ app.config['GENERATED_FILE'] = 'app/static/generated'
 def index():
 
 	# Execute if request is get
-	if request.method == "GET":
+	if request.method in ("GET", "HEAD"):
+	#if request.method == "GET":
 	    return render_template("index.html")
 
 	# Execute if reuqest is post
